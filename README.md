@@ -49,3 +49,20 @@ You could also use a non-random function there if it suited your purposes. e.g.
     tracery.createGrammar({origin: ['#animal#'], animal: ['dog', 'cat']}).flatten('#origin#')
 
 The result of that last line will always be 'cat' now.
+
+## Base English modifiers
+
+You can add some base English modifiers to tracery with:
+
+```javascript
+grammar.addModifiers(tracery.baseEngModifiers); 
+```
+
+The available modifiers are:
+
+- **capitalizeAll**: capitalizes all words in string
+- **capitalize**: capitalizes the first word only
+- **a**: prepends string with 'a' or 'an'
+- **firstS**: calls 's' modifier on the first word in string
+- **s**: pluralizes word, with simple pluralization rules (doesn't do many exceptions)
+- **ed**: makes word past tense, with simple rules
